@@ -120,8 +120,11 @@ Guía práctica que incluye:
 
 ## 💻 Ejemplos prácticos
 
-### Ejemplo 1: Primera base vectorial
-**Archivo:** `examples/01_primera_base_vectorial.py`
+### Ejemplo 1: Primera base vectorial (Simple - Sin Internet) ⭐
+**Archivo:** `examples/01_primera_base_vectorial_simple.py`
+
+✅ **Funciona sin conexión a internet**  
+✅ **No requiere descargar modelos**
 
 Este script demuestra:
 - ✅ Crear cliente ChromaDB
@@ -133,7 +136,7 @@ Este script demuestra:
 
 **Ejecutar:**
 ```bash
-python examples/01_primera_base_vectorial.py
+python examples/01_primera_base_vectorial_simple.py
 ```
 
 **Salida esperada:**
@@ -143,8 +146,25 @@ python examples/01_primera_base_vectorial.py
 - Filtrado por categorías
 - Estadísticas de la colección
 
-### Ejemplo 2: Sistema RAG completo
+### Ejemplo 1b: Primera base vectorial (Completa - Requiere Internet)
+**Archivo:** `examples/01_primera_base_vectorial.py`
+
+⚠️ **Requiere conexión a internet** para descargar modelos
+
+Versión mejorada con sentence-transformers que proporciona:
+- Embeddings más precisos y semánticos
+- Resultados de búsqueda más relevantes
+- Experiencia más cercana a producción
+
+**Ejecutar:**
+```bash
+python examples/01_primera_base_vectorial.py
+```
+
+### Ejemplo 2: Sistema RAG completo (Requiere Internet)
 **Archivo:** `examples/02_sistema_rag_completo.py`
+
+⚠️ **Requiere conexión a internet** para descargar modelos
 
 Un sistema RAG funcional que incluye:
 - ✅ Clase `SistemaRAG` reutilizable
@@ -193,13 +213,13 @@ Consulta → Búsqueda Vectorial → Documentos → LLM → Respuesta
 
 ### Nivel 2: Práctica básica (1-2 horas)
 1. ✅ Instala dependencias
-2. ✅ Ejecuta `01_primera_base_vectorial.py`
+2. ✅ Ejecuta `01_primera_base_vectorial_simple.py` (funciona sin internet)
 3. ✅ Modifica el código con tus propios documentos
 4. ✅ Experimenta con diferentes consultas
 
 ### Nivel 3: Sistema completo (2-3 horas)
 1. ✅ Lee `04_practica_base_vectorial.md`
-2. ✅ Ejecuta `02_sistema_rag_completo.py`
+2. ✅ Ejecuta `02_sistema_rag_completo.py` (requiere internet)
 3. ✅ Completa los ejercicios prácticos
 4. ✅ Crea tu propio sistema RAG
 
@@ -319,11 +339,13 @@ git clone https://github.com/acastillom24/retrieval-augmented-generation.git
 cd retrieval-augmented-generation
 pip install -r requirements.txt
 
-# 3. Ejecuta tu primer ejemplo
-python examples/01_primera_base_vectorial.py
+# 3. Ejecuta tu primer ejemplo (sin necesidad de internet)
+python examples/01_primera_base_vectorial_simple.py
 ```
 
 ---
+
+**💡 Nota:** El ejemplo `01_primera_base_vectorial_simple.py` funciona sin conexión a internet, perfecto para comenzar a aprender los conceptos básicos de RAG.
 
 **¿Preguntas o sugerencias?** Abre un issue en GitHub.
 
