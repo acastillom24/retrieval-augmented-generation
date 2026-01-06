@@ -210,13 +210,13 @@ results = collection.query(
 
 ## Comparación con otras bases vectoriales
 
-| Característica | ChromaDB | Pinecone | Weaviate | Qdrant |
-|----------------|----------|----------|----------|--------|
-| Open Source | ✅ | ❌ | ✅ | ✅ |
-| Auto-embeddings | ✅ | ❌ | ✅ | ❌ |
-| Modo local | ✅ | ❌ | ✅ | ✅ |
-| Simplicidad | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ |
-| Escalabilidad | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+|Característica|ChromaDB|Pinecone|Weaviate|Qdrant|
+|--------------|--------|--------|--------|------|
+|Open Source|✅|❌|✅|✅|
+|Auto-embeddings|✅|❌|✅|❌|
+|Modo local|✅|❌|✅|✅|
+|Simplicidad|⭐⭐⭐⭐⭐|⭐⭐⭐|⭐⭐⭐|⭐⭐⭐⭐|
+|Escalabilidad|⭐⭐⭐|⭐⭐⭐⭐⭐|⭐⭐⭐⭐|⭐⭐⭐⭐|
 
 ## Casos de uso
 

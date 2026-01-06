@@ -50,15 +50,18 @@ python examples/01_primera_base_vectorial.py
 ```
 
 ### Ejemplo 2: Sistema RAG completo
+
 **Archivo:** `examples/02_sistema_rag_completo.py`
 
 Este ejemplo demuestra un sistema RAG funcional:
+
 - Clase `SistemaRAG` reutilizable
 - Base de conocimiento estructurada
 - Proceso completo de recuperación
 - Simulación de generación de respuestas
 
 **Ejecutar:**
+
 ```bash
 python examples/02_sistema_rag_completo.py
 ```
@@ -66,6 +69,7 @@ python examples/02_sistema_rag_completo.py
 ## 🧪 Ejercicios prácticos
 
 ### Ejercicio 1: Personalizar la base de conocimiento
+
 Modifica `01_primera_base_vectorial.py` para agregar tus propios documentos:
 
 ```python
@@ -83,6 +87,7 @@ metadatos = [
 ```
 
 ### Ejercicio 2: Experimentar con consultas
+
 Prueba diferentes consultas y observa los resultados:
 
 ```python
@@ -102,6 +107,7 @@ for consulta in consultas:
 ```
 
 ### Ejercicio 3: Filtrado avanzado
+
 Implementa búsquedas con múltiples filtros:
 
 ```python
@@ -123,6 +129,7 @@ resultados = collection.query(
 ## 🔍 Conceptos clave a observar
 
 ### 1. Similitud vs Distancia
+
 - **Distancia más baja** = Mayor similitud
 - **Similitud = 1 - distancia**
 - Valores típicos:
@@ -131,17 +138,22 @@ resultados = collection.query(
   - Distancia > 0.7: Poco similar
 
 ### 2. Embeddings automáticos
+
 ChromaDB genera embeddings automáticamente usando sentence-transformers. No necesitas crearlos manualmente.
 
 ### 3. Metadatos
+
 Los metadatos permiten:
+
 - Organizar documentos
 - Filtrar búsquedas
 - Agregar contexto adicional
 - Rastrear fuentes
 
 ### 4. IDs únicos
+
 Cada documento necesita un ID único para:
+
 - Identificación
 - Actualización
 - Eliminación
@@ -150,7 +162,7 @@ Cada documento necesita un ID único para:
 
 Ejemplo de salida:
 
-```
+```bash
 1. Documento: Python es un lenguaje de programación...
    Categoría: lenguajes | Tema: python | Nivel: basico
    Similitud: 0.8234 (distancia: 0.1766)
@@ -165,17 +177,20 @@ Ejemplo de salida:
 Después de completar esta práctica:
 
 1. **Persistencia**: Aprende a guardar datos permanentemente
+
    ```python
    client = chromadb.PersistentClient(path="./mi_base_datos")
    ```
 
 2. **Documentos grandes**: Implementa chunking para textos largos
+
    ```python
    # Dividir texto en fragmentos de 500 palabras
    chunks = [texto[i:i+500] for i in range(0, len(texto), 500)]
    ```
 
 3. **Integración con LLMs**: Conecta con OpenAI, Anthropic u otros
+
    ```python
    # Usar contexto recuperado con un LLM
    respuesta = llm.generate(
@@ -184,6 +199,7 @@ Después de completar esta práctica:
    ```
 
 4. **Carga de archivos**: Lee documentos desde PDFs, TXT, etc.
+
    ```python
    import PyPDF2
    # Cargar y procesar PDFs
@@ -192,20 +208,25 @@ Después de completar esta práctica:
 ## 🐛 Solución de problemas
 
 ### Error: "No module named 'chromadb'"
+
 ```bash
-pip install chromadb
+uv add chromadb
 ```
 
 ### Error: "No module named 'sentence_transformers'"
+
 ```bash
-pip install sentence-transformers
+uv add sentence-transformers
 ```
 
 ### Advertencias de telemetría
+
 Las advertencias sobre telemetría son normales y no afectan el funcionamiento.
 
 ### Errores de memoria
+
 Si trabajas con muchos documentos, considera:
+
 - Usar persistencia en disco
 - Procesar en lotes
 - Reducir `n_results` en consultas
@@ -235,9 +256,3 @@ R: Sí, los modelos sentence-transformers soportan múltiples idiomas.
 
 **P: ¿Es gratis?**  
 R: Sí, ChromaDB es completamente open-source y gratuito.
-
-## 🎉 ¡Éxito!
-
-Si has llegado hasta aquí, ¡felicitaciones! Has dado tus primeros pasos en el mundo de RAG y bases de datos vectoriales.
-
-Continúa practicando y experimentando con tus propios casos de uso.
