@@ -2,7 +2,7 @@
 
 ## ¿Qué es RAG?
 
-RAG (Retrieval-Augmented Generation) es una técnica de inteligencia artificial que combina la recuperación de información con la generación de texto mediante modelos de lenguaje grandes (LLMs).
+RAG (Retrieval-Augmented Generation) es una técnica de inteligencia artificial que combina la recuperación de información con la generación de texto mediante grandes modelos de lenguaje (LLMs).
 
 ## ¿Cómo funciona RAG?
 
@@ -23,7 +23,7 @@ El proceso RAG consta de tres pasos principales:
 
 ## Arquitectura básica de RAG
 
-```
+```bash
 Usuario → Pregunta
     ↓
 Embeddings de la pregunta

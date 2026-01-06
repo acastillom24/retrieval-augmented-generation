@@ -7,6 +7,7 @@ Los embeddings vectoriales son representaciones numéricas de texto en forma de 
 ## ¿Por qué son importantes?
 
 Los embeddings permiten:
+
 - Comparar la similitud entre textos
 - Realizar búsquedas semánticas (por significado, no solo por palabras exactas)
 - Agrupar documentos similares
@@ -15,14 +16,18 @@ Los embeddings permiten:
 ## Características de los embeddings
 
 ### Similitud semántica
+
 Textos con significados similares tienen vectores cercanos en el espacio vectorial.
 
 Ejemplo:
+
 - "perro" y "cachorro" → vectores cercanos
 - "perro" y "automóvil" → vectores distantes
 
 ### Dimensionalidad
+
 Los embeddings típicamente tienen dimensiones entre 384 y 1536:
+
 - OpenAI text-embedding-3-small: 1536 dimensiones
 - sentence-transformers/all-MiniLM-L6-v2: 384 dimensiones
 
@@ -40,27 +45,34 @@ embedding = modelo_embedding.encode(texto)
 ## Medidas de similitud
 
 ### Similitud de Coseno
+
 Mide el ángulo entre dos vectores:
+
 - 1.0 = idénticos
 - 0.0 = ortogonales (no relacionados)
 - -1.0 = opuestos
 
 ### Distancia Euclidiana
+
 Mide la distancia geométrica entre vectores:
+
 - 0.0 = idénticos
 - Mayor valor = más distantes
 
 ### Producto punto
+
 Producto interno de dos vectores, útil para normalizar vectores.
 
 ## Modelos de embeddings populares
 
 ### Modelos open source
+
 - **sentence-transformers**: Modelos ligeros y rápidos
 - **BERT**: Modelo clásico de Google
 - **MPNet**: Optimizado para similitud semántica
 
 ### Modelos comerciales
+
 - **OpenAI Embeddings**: Alta calidad, requiere API key
 - **Cohere Embeddings**: Especializado en búsqueda
 - **Google PaLM Embeddings**: Integrado con servicios GCP

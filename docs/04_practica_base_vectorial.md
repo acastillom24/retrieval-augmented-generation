@@ -11,6 +11,7 @@ Esta guía te llevará paso a paso a través de la construcción de tu primera b
 ## 🎯 Objetivos de aprendizaje
 
 Al completar esta práctica, serás capaz de:
+
 - ✅ Crear una base de datos vectorial con ChromaDB
 - ✅ Agregar documentos y metadatos
 - ✅ Realizar búsquedas semánticas
@@ -23,7 +24,7 @@ Al completar esta práctica, serás capaz de:
 2. Instalar dependencias:
 
 ```bash
-pip install -r requirements.txt
+uv sync
 ```
 
 ## 📚 Estructura de la práctica
@@ -31,9 +32,11 @@ pip install -r requirements.txt
 La práctica está dividida en dos ejemplos progresivos:
 
 ### Ejemplo 1: Primera base vectorial
+
 **Archivo:** `examples/01_primera_base_vectorial.py`
 
 Este ejemplo te enseña los conceptos básicos:
+
 - Crear cliente ChromaDB
 - Crear colecciones
 - Agregar documentos con metadatos
@@ -41,6 +44,7 @@ Este ejemplo te enseña los conceptos básicos:
 - Filtrar por metadatos
 
 **Ejecutar:**
+
 ```bash
 python examples/01_primera_base_vectorial.py
 ```

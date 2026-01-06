@@ -7,21 +7,25 @@ ChromaDB es una base de datos vectorial open-source diseñada específicamente p
 ## Características principales
 
 ### 1. Simplicidad
+
 - API intuitiva y fácil de usar
 - Sin configuración compleja
 - Funciona inmediatamente "out of the box"
 
 ### 2. Embeddings automáticos
+
 - Puede generar embeddings automáticamente
 - Soporta múltiples modelos de embedding
 - Permite usar embeddings personalizados
 
 ### 3. Búsqueda semántica
+
 - Búsqueda por similitud vectorial
 - Filtrado de metadatos
 - Consultas híbridas (vectorial + metadatos)
 
 ### 4. Persistencia
+
 - Almacenamiento en disco
 - Modo en memoria para pruebas rápidas
 - Cliente/servidor para producción
@@ -29,19 +33,23 @@ ChromaDB es una base de datos vectorial open-source diseñada específicamente p
 ## Instalación
 
 ```bash
-pip install chromadb
+uv add chromadb
 ```
 
 ## Conceptos clave
 
 ### Collections (Colecciones)
+
 Una colección es un conjunto de documentos con sus embeddings:
+
 - Similar a una tabla en SQL
 - Puede tener múltiples documentos
 - Cada documento tiene ID, embedding, metadata y contenido
 
 ### Metadatos
+
 Información adicional sobre documentos:
+
 ```python
 metadata = {
     "source": "manual_usuario.pdf",
@@ -52,7 +60,9 @@ metadata = {
 ```
 
 ### Distance Functions
+
 ChromaDB soporta múltiples funciones de distancia:
+
 - **Cosine similarity** (por defecto): Basada en ángulos
 - **Euclidean distance (L2)**: Distancia geométrica
 - **Inner product**: Producto punto
@@ -93,16 +103,19 @@ results = collection.query(
 ## Modos de operación
 
 ### Modo Ephemeral (en memoria)
+
 ```python
 client = chromadb.Client()  # No persiste datos
 ```
 
 ### Modo Persistent (persistente)
+
 ```python
 client = chromadb.PersistentClient(path="/ruta/a/datos")
 ```
 
 ### Modo Client/Server
+
 ```python
 client = chromadb.HttpClient(host="localhost", port=8000)
 ```
@@ -110,7 +123,9 @@ client = chromadb.HttpClient(host="localhost", port=8000)
 ## Funciones de embedding
 
 ### Embedding por defecto
+
 ChromaDB usa sentence-transformers por defecto:
+
 ```python
 collection = client.create_collection(
     name="mi_coleccion",
@@ -119,6 +134,7 @@ collection = client.create_collection(
 ```
 
 ### Embedding personalizado
+
 ```python
 from chromadb.utils import embedding_functions
 
@@ -136,6 +152,7 @@ collection = client.create_collection(
 ## Operaciones CRUD
 
 ### Create (Crear)
+
 ```python
 collection.add(
     documents=["documento"],
@@ -144,6 +161,7 @@ collection.add(
 ```
 
 ### Read (Leer)
+
 ```python
 # Obtener por ID
 result = collection.get(ids=["id1"])
@@ -156,6 +174,7 @@ results = collection.query(
 ```
 
 ### Update (Actualizar)
+
 ```python
 collection.update(
     ids=["id1"],
@@ -164,6 +183,7 @@ collection.update(
 ```
 
 ### Delete (Eliminar)
+
 ```python
 collection.delete(ids=["id1"])
 ```
